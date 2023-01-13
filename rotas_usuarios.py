@@ -1,6 +1,6 @@
 from helpers import FormularioUsuario
 from models import Usuarios
-from jogoteca import app
+from app import app
 from flask import render_template, request, redirect, session, flash, url_for
 from flask_bcrypt import check_password_hash
 
