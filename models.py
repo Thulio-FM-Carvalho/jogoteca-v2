@@ -1,4 +1,4 @@
-from jogoteca import db
+from app import db
 
 
 # classe modelo para fazer a ponte com o banco de dados
