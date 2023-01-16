@@ -32,7 +32,8 @@ def autenticar():
     usuario = Usuarios.query.filter_by(nickname=form.nickname.data).first()
 
     #validando se a senha fornecida é a mesma senha do banco de dados
-    senha = check_password_hash(usuario.senha, form.senha.data)
+    #senha = check_password_hash(usuario.senha, form.senha.data)
+    senha = usuario.senha == form.senha.data
 
     if usuario and senha:
         session['usuario_logado'] = usuario.nickname
